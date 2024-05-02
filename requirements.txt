@@ -144,9 +144,8 @@ sympy==1.12
 tenacity==8.2.3
 tensorboard==2.13.0
 tensorboard-data-server==0.7.1
-tensorflow==2.13.0rc1
+tensorflow==2.8.0
 tensorflow-estimator==2.13.0rc0
-tensorflow-macos==2.13.0rc1
 termcolor==2.3.0
 terminado==0.17.1
 threadpoolctl==3.1.0
