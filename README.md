@@ -1,10 +1,10 @@
 # ML-Timeseries-EnergyConsumption
 
-**Project Domain**
+**PROJECT DOMAIN**
 
 This project is about energy management and optimization field that focuses on the need for efficient energy use across modern appliances. By gathering and analyzing energy usage data, the project tries to tackle the challenges associated with excessive energy consumption and aims to promote sustainable energy habits. 
 
-**Business Understanding**
+**BUSINESS UNDERSTANDING**
 
 The main challenges addressed by this project include the lack of real-time insights into energy consumption patterns and the lack of existing solutions to dynamically predict and manage energy use. To achieve these objectives, I propose implementing a predictive model for forecasting based on historical data, which will facilitate proactive energy management. 
 
