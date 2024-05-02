@@ -14,24 +14,26 @@ The dataset utilized in this project is structured in a .csv format, containing 
 
 **Data Preparation**
 
-**1	Renaming Columns**: Initially, columns such as 'Ampere (A)' and 'Voltage (V)' are renamed to 'Ampere' and 'Voltage' for consistency and ease of reference in the code. Simplifying column names reduces the risk of errors in scripting and improves the readability of the code.
+**- Renaming Columns**: Initially, columns such as 'Ampere (A)' and 'Voltage (V)' are renamed to 'Ampere' and 'Voltage' for consistency and ease of reference in the code. Simplifying column names reduces the risk of errors in scripting and improves the readability of the code.
 
-**2	Timestamp Conversion**: The 'Timestamp' column is converted from a string format to a datetime object. This transformation is important for time series analysis, as it enables the use of datetime-specific functions in pandas, such as resampling and time-based indexing. 
+**- Timestamp Conversion**: The 'Timestamp' column is converted from a string format to a datetime object. This transformation is important for time series analysis, as it enables the use of datetime-specific functions in pandas, such as resampling and time-based indexing. 
 
-**3	Feature Engineering**:
+**- Feature Engineering**:
 - Power Calculation: A new column, 'Power', is computed as the product of 'Voltage' and 'Ampere'. This step is important for understanding the energy dynamics since power measurement is a direct indicator of how much energy an appliance consumes per unit time
   
 - Energy Calculation: Energy consumption over a 5-minute interval is calculated by multiplying the 'Power' by the time interval (in hours). This column ('Energy') quantifies the total energy used by an appliance.
   
-** 4 Handling Missing Data: Any missing values in the dataset are identified and addressed. In this project, the code checks for missing data points and applies imputation techniques if necessary. The handling of missing data prevents the model from being biased or inaccurate due to incomplete information.
+**- Handling Missing Data**: 
+Any missing values in the dataset are identified and addressed. In this project, the code checks for missing data points and applies imputation techniques if necessary. The handling of missing data prevents the model from being biased or inaccurate due to incomplete information.
   
-** 5 Removing Anomalies**: The dataset is scrutinized for any anomalies, such as negative values in the 'Ampere' and 'Voltage' columns, which are physically implausible. Records with such values are removed to ensure the quality and reliability of the dataset. 
+**- Removing Anomalies**
+The dataset is scrutinized for any anomalies, such as negative values in the 'Ampere' and 'Voltage' columns, which are physically implausible. Records with such values are removed to ensure the quality and reliability of the dataset. 
 
-** 6	Feature Extraction**
+**- Feature Extraction**
 •	Time Features: Additional features like 'Hour', 'DayOfWeek', and 'IsWeekend' are derived from the 'Timestamp' to capture potential cyclic patterns in energy consumption. These features can help the model recognize and adjust to regular temporal variations in energy use.
 •	Peak Hours Identification: A binary feature 'IsPeakHours' is created to indicate whether the measurement was taken during peak energy usage hours (defined as between 18:00 and 22:00). This feature is expected to assist in distinguishing periods of high energy demand
 
-** 7	Stationarity Check Using Dickey-Fuller Test**
+**- Stationarity Check Using Dickey-Fuller Test**
 To ensure the reliability of time-series models like ARIMA and SARIMAX, it's essential to verify that the data does not exhibit any unit root, meaning it should be stationary. The Dickey-Fuller test is employed to test the null hypothesis that the time series is non-stationary due to the presence of a unit root.  Given that the p-value is significantly low (less than 0.05), we reject the null hypothesis, concluding that the data is stationary.
 
 **Data Modelling**
