@@ -44,4 +44,4 @@ Adaptability: It offers better adaptability to the nuances of energy consumption
 Evaluation
 
 In this phase, the performance of the developed models is evaluated using the Root Mean Square Error (RMSE), which is a standard metric for assessing the accuracy of a model's predictions. The RMSE for the training dataset is 12.93. A score of 12.93 suggests that, on average, the model's predictions deviate from the actual values by approximately 12.93 units. The RMSE for the test dataset is 10.41. A test score of 10.41, which is lower than the training score, indicates that the model is generalizing well and not overfitting to the training data.
-![image](https://github.com/Wan-Razaq/ML-Timeseries-EnergyConsumption/assets/62881706/39cdd47a-3612-4c87-a757-8fb746bf1cb4)
+
