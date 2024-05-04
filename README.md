@@ -1,5 +1,7 @@
 # ML-Timeseries-EnergyConsumption
 
+Link for ML Web App implemented and deployed using Streamlit : https://ml-timeseries-energyconsumption-znzndkutaugwsjubuwnwcv.streamlit.app
+
 **PROJECT DOMAIN**
 
 This project is about energy management and optimization field that focuses on the need for efficient energy use across modern appliances. By gathering and analyzing energy usage data, the project tries to tackle the challenges associated with excessive energy consumption and aims to promote sustainable energy habits. 
